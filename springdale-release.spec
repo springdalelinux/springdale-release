@@ -7,11 +7,11 @@
 %define full_release_version 7.0
 %define dist_release_version 7
 #define beta Beta
-%define dist .el%{dist_release_version}
+%define dist .sdl%{dist_release_version}
 
 Name:           springdale-release
 Version:        %{full_release_version}
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -123,6 +123,9 @@ rm -rf %{buildroot}
 %{_prefix}/lib/systemd/system-preset/*
 
 %changelog
+* Fri Jun 27 2014 Josko Plazonic <plazonic@princeton.edu> - 7.0-2.sdl7
+- fix dist
+
 * Wed Jun 25 2014 Josko Plazonic <plazonic@math.princeton.edu> - 7.0-1.sdl7
 - springdale version
 
