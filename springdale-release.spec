@@ -11,7 +11,7 @@
 
 Name:           springdale-release
 Version:        %{full_release_version}
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        %{product_family} release file
 Group:          System Environment/Base
 License:        GPLv2
@@ -21,7 +21,7 @@ Provides:       system-release(releasever) = %{base_release_version}
 Source0:        %{name}-%{base_release_version}-1.tar.gz
 Source1:        85-display-manager.preset
 Source2:        90-default.preset
-
+Requires:	springdale-core
 
 %description
 %{product_family} release files
@@ -123,6 +123,9 @@ rm -rf %{buildroot}
 %{_prefix}/lib/systemd/system-preset/*
 
 %changelog
+* Fri Jun 27 2014 Josko Plazonic <plazonic@princeton.edu> - 7.0-3.sdl7
+- require springdale-core
+
 * Fri Jun 27 2014 Josko Plazonic <plazonic@princeton.edu> - 7.0-2.sdl7
 - fix dist
 
